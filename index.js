@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+app.use(express.urlencoded({ extended: true }));
 const port = process.env.PORT || 8000;
 //Set up the mongoose database
 const db = require("./config/mongoose");
