@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 app.use(express.urlencoded({ extended: true }));
 const port = process.env.PORT || 8000;
-//Set up the mongoose database
+//Set up the database
 const db = require("./config/mongoose");
 app.use("/", require("./routes"));
 app.listen(port, (err) => {
